@@ -22,27 +22,27 @@ export default function MyNavbar() {
 }
 
   return (
-    <Navbar fluid>
+    <Navbar fluid className="sticky top-0 z-50  shadow-xl shadow-neutral-950">
       <NavbarBrand as={Link} to="/posts">
       <BsBalloonHeart className="text-white text-4xl" />  <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Gatherly</span>
       </NavbarBrand>
       {token && <NavbarToggle />}
       {token && <NavbarCollapse>
-        
-        <NavbarLink as={Link} to="/posts">
+
+        <NavbarLink className="text-[18px] font-bold me-12 " as={Link} to="/posts">
           home
         </NavbarLink>
-        <NavbarLink as={Link} to="/posts">
+        <NavbarLink className="text-[18px] font-bold" as={Link} to="/posts">
           posts
         </NavbarLink>
 
       </NavbarCollapse>}
 <div className="flex justify-center items-center gap-5 rounded-4xl">
      <img src={UserData ? UserData.photo : profile} alt="" className="w-[50px] block " />
- <Dropdown label={UserData ? UserData.name : "user" }  >
+ <Dropdown  label={UserData ? UserData.name : "user" }  >
 
         {token ? <>
-    <DropdownItem >{UserData ? UserData.email : "user@example.com"}</DropdownItem>
+    <DropdownItem  >{UserData ? UserData.email : "user@example.com"}</DropdownItem>
 
           <DropdownItem as={Link} to="/profile">profile</DropdownItem>
           <DropdownDivider />
