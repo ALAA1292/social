@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+
+@layer utilities{
+  .container{
+      margin-inline: auto;
+      padding-inline: 2rem;
+  }
+}
