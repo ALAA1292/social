@@ -154,10 +154,7 @@ export default function Register() {
           <Checkbox id="remember" />
           <Label htmlFor="remember">Remember me</Label>
         </div>
-        <Button type="submit">Submit
-  {formState.isSubmitting && <BeatLoader color="#dbd1d1" />}
-
-        </Button>
+        <Button type="submit">Submit</Button>
       </form>
     </div>
   )
